@@ -6,7 +6,13 @@ url = ("https://newsapi.org/v2/everything?q=tesla&from=2023-10-25&sortBy=publish
 
 # Make request
 response = requests.get(url)
+
+# Get a dictionary
 content = response.json()
+
+# Iterate through a dictionary
 for item in content['articles']:
     print(item['title'])
     print(item['description'])
+
+
